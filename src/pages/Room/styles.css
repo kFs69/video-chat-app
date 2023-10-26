@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgb(32, 32, 32);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#mediaSettings {
+    text-align: center;
+}
+
+#videoGrid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+video {
+    min-width: 640px;
+    padding: 5px;
+}
+
+#mediaIcon {
+    padding: 20px;
+    margin-right: 15px;
+    font-size: 25px;
+    background-color: #1de9b6;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+#mediaIconHangUp {
+    padding: 20px;
+    font-size: 25px;
+    background-color: rgb(173, 0, 0);
+    border-radius: 32px;
+    cursor: pointer;
+}
