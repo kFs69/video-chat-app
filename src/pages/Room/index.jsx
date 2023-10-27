@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Peer from 'peerjs';
 import { FaMicrophone, FaMicrophoneSlash, FaVideo, FaVideoSlash } from 'react-icons/fa'
 import { ImPhoneHangUp } from 'react-icons/im'
+import { BsThreeDots } from 'react-icons/bs'
 import './styles.css';
 
 function Room() {
@@ -53,10 +54,6 @@ function Room() {
 
     peer.on('open', (id) => {
       socket.emit('join-room', roomId, id);
-    })
-
-    socket.on('user-connected', (userId) => {
-      console.log('User connected: ', userId)
     })
   }, [])
 
@@ -109,6 +106,7 @@ function Room() {
           <FaVideoSlash onClick={() => disableCam()} id="mediaIcon" /> 
           : <FaVideo onClick={() => disableCam()} id="mediaIcon" /> 
         }
+        <BsThreeDots id="mediaIcon" />
         <ImPhoneHangUp onClick={() => navigate('/')} id="mediaIconHangUp" />
       </div>
     </div>
